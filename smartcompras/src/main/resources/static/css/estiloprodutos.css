@@ -1,0 +1,102 @@
+.navbar{
+	color: white;
+}
+
+.container-fluid{
+	background-color:black;
+		font-family: 'Imprima', sans-serif;
+	
+}
+
+
+.social{
+	position: rigth;
+}
+
+.well{
+	background-color:black;
+	color:white;
+	font-family: 'Imprima', sans-serif;
+	margin-top: 2%;
+	
+	
+}
+
+#busca{
+	border-radius:8px;
+	margin-left: 5px;
+}
+
+.redes-sociais{
+	margin-right: 20px;
+}
+.redes-sociais img{
+	width: 1.8em;
+	height: 1.2em;
+	padding-left: 0.5em;
+	
+}
+#rodape ul {
+	
+	color: white;
+	list-style:none;	
+	float:left;
+	overflow:hidden;
+	
+}
+#rodape ul li { 
+	display: inline; 
+	padding:0.7em;
+	margin:0.7em;
+}
+
+.redes-sociais{
+	margin-right:1em;
+	
+}
+/* ------------------------------------------------- Fim Formatação Rodapé ------------------------------------------ */
+
+/* Formulario Produtos*/
+
+fieldset{
+	
+	width: 80%;
+	margin-left:10%; 
+	margin-top: 12%;
+}
+
+
+.form-produtos{
+	
+	width: 50%;
+	margin-left:5%; 
+	
+}
+
+.marca{
+	
+	height: 18em;
+}
+
+.table{
+	width: 90%;
+	margin-left:3%; 
+	margin-top:5%; 
+	
+}
+
+.coluna{
+	width: 15%;
+}
+
+.fotoProduto{
+	
+	width: 25%;
+	height: 17em;
+	float: right;
+	margin-right: 14%;
+	margin-top: 12%;
+	background-color: grey;
+	
+	
+}

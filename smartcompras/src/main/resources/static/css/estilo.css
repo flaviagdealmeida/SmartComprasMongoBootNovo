@@ -1,0 +1,411 @@
+
+.container-fluid{
+	background-color:black;
+		font-family: 'Imprima', sans-serif;
+	
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+.section_topo {
+	height:100%;
+	background-image:url("../img/topo2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+ 
+ 
+}
+
+.section_topo p{
+	
+	font-family: 'Catamaran', sans-serif;
+	color:white;
+	font-size: 2em;	
+}
+.section_topo h1{
+	
+	font-family: 'Catamaran', sans-serif;
+	color:white;
+	font-size: 11em;
+	margin-left: 3%;
+}
+
+.section_topo p{
+	margin-left:5%;
+	margin-right: 45%;	
+	display: block;
+}
+
+.btn-group{
+	float:right;
+	font-family: 'Imprima', sans-serif;
+}
+
+
+
+
+#redirect{
+	margin-top: 20%;
+	margin-left: 40%;
+}
+/* ------------------------------------------------------ Fim da formatação do topo --------------------------------------------------------------------- */
+
+
+.modal-header{
+	background-color:black;
+	color:white;
+	font-family: 'Imprima', sans-serif;
+}
+
+.modal-footer button{
+	border-radius:8px;	
+}
+
+.col-sm-4 {
+	font-family: 'Imprima', sans-serif;
+	height: 200px;
+	color:white;
+}
+
+#tserv{
+	height: 200px;
+	
+}
+.col-sm-4 h2 {
+	text-align: center;
+	font-size: 3em;
+
+	}
+.col-sm-4 p {
+	margin-top:5%;
+	text-align: center;
+	font-size: 1em;
+
+	}
+	
+.col-sm-4 img {
+	margin-top:5%;
+	padding-left: 25%;
+	}
+	
+	
+#linha{
+	
+	border-left-style: solid;
+	
+}
+/*--------------------------------------------------------- Fim Formatação Modal -------------------------------------------------------------------*/
+
+
+.social{
+	position: rigth;
+}
+
+.well{
+	background-color:black;
+	color:white;
+	font-family: 'Imprima', sans-serif;
+	margin-top: 2%;
+	
+	
+}
+
+#busca{
+	border-radius:8px;
+	margin-left: 5px;
+}
+
+.redes-sociais{
+	margin-right: 20px;
+}
+.redes-sociais img{
+	width: 1.8em;
+	height: 1.2em;
+	padding-left: 0.5em;
+	
+}
+#rodape ul {
+	
+	color: white;
+	list-style:none;	
+	float:left;
+	overflow:hidden;
+	
+}
+#rodape ul li { 
+	display: inline; 
+	padding:0.7em;
+	margin:0.7em;
+}
+
+.redes-sociais{
+	margin-right:1em;
+	
+}
+
+
+
+/* ------------------------------------------------- Fim Formatação Rodapé ------------------------------------------ */
+
+.logo-small{
+	color: #f4511e;
+    font-size: 90px;
+}
+
+.servicos span{
+	color: #f4511e;
+    font-size: 90px;
+}
+.servicos{
+	background-color: white;
+	color: black;
+}
+.servicos h4{
+	background-color: white;
+	color: #303030;
+}
+.servicos p{
+	background-color: white;
+	color: #303030;
+}
+.servicos h2{
+	background-color: black;
+	color: white;
+	margin-left: 0px;
+}
+ /* ------------------------------------- Equipe -------------------------------------- */
+
+.row{
+	float:left;
+	padding-left:-0.1em;
+	margin-left: -0.2em;
+}
+.col-sm-2{
+	
+	margin-left: 1.3em;
+	width:16em;
+	height: 40em;
+
+}
+
+.col-sm-2 img{
+	width: 11em;
+	height:9em;
+	margin-left: 1%;
+	padding: 2%;
+}
+
+.panel-warning{
+	border:none;
+	margin-left: 5%;
+	height: 25em;
+	
+}
+
+.panel-body{
+	color:black;
+	heidth: 40em;
+	
+}
+
+.panel-heading{
+	background-image: url("../img/topo2.jpg");
+}
+
+
+.col-sm-4{
+	
+	display:block;
+	float:left;
+	
+}
+
+.tam{
+	width: 250px;
+}
+
+
+.equipe h4, h2{
+	color: white;
+	}
+
+
+.l2{
+	
+	margin-left:18%;
+	margin-top: 400px;	
+	width: 280px;
+	
+}
+#home{
+	margin-top:2%;
+	float:right;
+}
+
+/* ---------------------------------------------------------Fim  Formatação Equipe e Serviços  -------------------------------------------------------------- */
+
+
+
+.section_sld{
+	margin-top: 2.5%;
+}
+
+.jumbotron {
+	 background-color: black;
+}
+
+.jumbotron h2{
+	margin-left: 0.5em;
+}
+
+
+.jumbotron p{
+	margin-left:5%;
+	margin-right: 45%;
+	margin-top:1%;	
+	display: block;
+	color:white;
+	text-align: justify;
+}
+
+.btn-group{
+	float:right;
+	font-family: 'Imprima', sans-serif;
+}
+
+.posicao_sld{
+	margin-left: 52em;
+	margin-top: -16em;
+	
+	}
+	
+#botao{
+	margin-left: 5em;
+	margin-top: -2.5em;
+	
+	}	
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+/* -------------------------------- Sobre ---------------------------------- */
+
+blockquote{
+	
+	font-size: 21px;
+	color:white;
+	border-color: orange;
+	text-align: justify;
+	
+}
+
+/* ---------------------------- vertical --------------------------------- */
+
+#graf {
+      position: relative;
+  }
+  
+  ul.nav-pills {
+      top: 150px;
+      float:left;
+      left:0.5%;
+      padding: 40px;
+      position: fixed;
+      margin-top: 1%;
+  }
+  
+   .col-sm-3{
+  	top: 150px;
+  
+  }
+  
+  .bt{
+  	width: 150px;
+  }
+  
+  div.col-sm-9 div {
+  	 
+      height: 600px;
+      font-size: 20px;
+  }
+
+#section1{
+	margin-top	: 150px;
+	background-color: white;
+	width: 1200px;
+	margin-left: -150px;
+}
+
+#chart{
+	margin-left: 23%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	padding: 3em;
+}
+.meio{
+	height: 40em;
+	
+}
+
+
+/* Formulario Produtos*/
+
+fieldset{
+	
+	width: 80%;
+	margin-left:10%; 
+	margin-top: 12%;
+}
+
+
+.form-produtos{
+	
+	width: 50%;
+	margin-left:10%; 
+	
+}
+
+.marca{
+	
+	height: 18em;
+}
+
+.table{
+	width: 50%;
+	margin-left:25%; 
+	
+}
+
+.coluna{
+	width: 15%;
+}
+

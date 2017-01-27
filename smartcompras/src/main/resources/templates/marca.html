@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SmartCompras</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" />
+
+<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+<link rel="stylesheet" href="css/estilo.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<link
+	href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima"
+	rel="stylesheet" />
+
+<script src="https://code.jquery.com/ui/1.12.0/jqueryui.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+
+	<div th:include="menu :: menu"></div>
+
+	<div class="container">
+
+
+		<form class="form-horizontal marca" action="/addmarcas" method="POST">
+			<fieldset>
+				<legend>Marca</legend>
+				<p>
+					<label class="control-label" for="marca">Marca</label> <input
+						class="form-control input-sm" type="text" id="marca" name="marca"
+						size="40" />
+				</p>
+
+
+				<div class="col-lg-10 col-lg-offset-4">
+					<button type="reset" class="btn btn-default">Cancel</button>
+					<button type="submit" class="btn btn-primary">Cadastrar</button>
+				</div>
+			</fieldset>
+		</form>
+
+		<form action="/delmarca" method="POST">
+			<table class="table table-striped table-hover ">
+				<thead>
+					<tr>
+						<th>Marca</th>
+						<th>Ação</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="marca : ${marcaList}">
+						<!-- 	<td th:text="${marca.id}"></td>  -->
+						<td th:text="${marca.marca}"></td>
+						<td class="coluna"><button class="btn btn-danger btn-sm"
+								type="submit" th:value="*{marca.id}" name="removerMarca">
+								Excluir</button></td>
+
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+
+
+
+		<div th:include="rodape :: rodape"></div>
+
+</body>
+</html>
