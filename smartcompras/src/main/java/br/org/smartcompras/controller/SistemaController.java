@@ -37,9 +37,9 @@ public class SistemaController {
 		return "sistema";
 	}
 	
-	@RequestMapping("menu")
-	public String menu() {
-		return "menu";
+	@RequestMapping("listadecompras")
+	public String listadecompras() {
+		return "listadecompras";
 	}	
 	
 }

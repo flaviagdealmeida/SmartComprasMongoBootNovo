@@ -60,16 +60,17 @@
 
 fieldset{
 	
-	width: 80%;
-	margin-left:10%; 
-	margin-top: 12%;
+	/* width: 80%;
+	margin-left:12%; 
+	margin-top: 12%; */
 }
 
 
 .form-produtos{
 	
-	width: 50%;
-	margin-left:5%; 
+	width: 40%;
+	margin-left:12%; 
+	margin-top: 3%;
 	
 }
 
@@ -89,14 +90,11 @@ fieldset{
 	width: 15%;
 }
 
-.fotoProduto{
-	
-	width: 25%;
+
+.fotoProduto img{
+	max-width: 25%;	
 	height: 17em;
 	float: right;
-	margin-right: 14%;
-	margin-top: 12%;
-	background-color: grey;
-	
-	
+	margin-right: 12%;
+	margin-top: 9%;
 }
