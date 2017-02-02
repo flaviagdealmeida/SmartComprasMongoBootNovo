@@ -42,4 +42,9 @@ public class SistemaController {
 		return "listadecompras";
 	}	
 	
+	@RequestMapping("carrinho")
+	public String carrinho() {
+		return "carrinho";
+	}	
+	
 }

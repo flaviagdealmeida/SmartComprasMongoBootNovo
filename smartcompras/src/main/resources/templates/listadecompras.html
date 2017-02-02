@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" ng-app="imagens">
+<html xmlns:th="http://www.thymeleaf.org" ng-app="produtos">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width-device-width" />
@@ -29,6 +29,9 @@
 <script src="js/main.js"></script>
 <script src="js/controllers/fotos-controller.js"></script>
 <script src="js/diretivas/produtos-diretivas.js"></script>
+<script src="js/angular-dragdrop.min.js"></script>
+    <script src="js/app.js"></script>
+
 <!-- Angular -->
 
 <!-- Bootstrap -->
@@ -45,10 +48,14 @@
 	rel="stylesheet"
 	integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr"
 	crossorigin="anonymous" />
+	
+	
+	
+	
 <!-- Bootstrap -->
 
 </head>
-<body ng-controller="FotosController" class="ng-scope">
+<body ng-controller="ImgprodutosController" class="ng-scope">
 
 	<div th:include="menu :: menu"></div>
 
@@ -57,36 +64,38 @@
 			<h2 class="text-center">Produtos</h2>
 
 		</div>
-		
+
 		<div class="row">
-			
+			<div class="col-md-10">
 				<form class="form-horizontal">
-					<label for="filtros">Filtrar por: </label>
-					<select name="filtros" id="filtros" ng-model:"filtro">
-						<option>Tipo</option>
-						<option>Produto </option>
-						<option>Marca </option>
-												
-					</select>
-				
+					<label for="filtros">Filtrar por: </label> 
+					<input ng-model="filtro" ng-model-options="{debounce: 500}" class="form-control"
+						placeholder="Digite o que deseja filtrar" />
 				</form>
-		
-		
+			</div>
 		</div>
+		<div class="row">
+			<div>
+				<meu-painel class="col-md-2 painel-animado"
+					ng-repeat="foto in fotos | filter:filtro" titulo="{{foto.titulo}}">
+				<img class="img-responsive center-block" alt="{{foto.titulo}}"
+					src="{{foto.url}}" /> </meu-painel>
 
-		<meu-painel ng-repeat="foto in fotos | filter:filtro painel-animado" titulo="{{foto.titulo}}" class="col-md-2">
-		<img class="img-responsive" alt="{{foto.titulo}}" src="{{foto.url}}" />
-		</meu-painel>
 
+			</div>
 
+		</div>
+		
+		
+		
+		
 	</div>
 
 
 
-	<div th:include="rodape :: rodape"></div>
 
 
-
+		<div th:include="rodape :: rodape"></div>
 </body>
 
 

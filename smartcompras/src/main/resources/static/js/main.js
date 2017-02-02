@@ -1,3 +1,3 @@
 angular.module('imagens',[]);
 
-//angular.module('imagens',['produtos-diretivas']);
+angular.module('produtos',['produtos-diretivas','ng-animate']);
