@@ -1,11 +1,16 @@
 package br.org.smartcompras.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import br.org.smartcompras.models.Produto;
 import br.org.smartcompras.repository.ProdutoMongoRepository;
 
 @Controller
@@ -27,6 +32,17 @@ public class ListaProdutoController {
 	}
 		
 	
-
+	@RequestMapping("/listadecompras")
+	public String comprasList(Model model) {
+		model.addAttribute("comprasList", produtoRepository.findAll());
+		return "listadecompras";
+	}
+	
+	@RequestMapping("/listaimgproduto")
+	@ResponseBody
+	public Iterable<Produto> imgsProduto(){
+		return this.produtoRepository.findAll();
+		
+	}
 	
 }

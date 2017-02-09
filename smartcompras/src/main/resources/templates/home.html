@@ -1,86 +1,80 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <title>SmartCompras</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" />
-
-<link rel="stylesheet" type="text/css" href="css/estilo.css" />
-<link rel="stylesheet" href="css/estilo.css" />
-<link rel="stylesheet" href="css/demo.css" />
-
-
-<link
-	href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima"
-	rel="stylesheet" />
-
-<script src="https://code.jquery.com/ui/1.12.0/jqueryui.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<script src="js/responsiveslides.min.js"></script>
-<script>
-	// You can also use "$(window).load(function() {"
-	$(function() {
-
-		// Slideshow 1
-		$("#slider1").responsiveSlides({
-			maxwidth : 500,
-			speed : 800
-		});
-
-	});
-</script>
-
-
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-	<!--  Topo da Página  -->
 
-	<!--  Topo da Página  -->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">SmartCompras</a>
+			</div>
 
-	<div class="section_topo">
-		<div class="btn-group">
-			<button type="button" class="btn btn-primary " data-toggle="modal"
-				data-target="#logar">Login</button>
-			<button type="button" class="btn btn-default " data-toggle="modal"
-				data-target="#cadastro">Cadastrar</button>
+			<ul class="nav navbar-nav navbar-right">
+				<li data-toggle="modal" data-target="#cadastro"><a href="#"><span
+						class="glyphicon glyphicon-user"></span> Novo usuário</a></li>
+				<li data-toggle="modal" data-target="#logar"><a href="#"><span
+						class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
 		</div>
-		<br /> <br />
-
-		<h1>SmartCompras</h1>
-		<p class="text-justify">Uma forma mais prática e eficiente de
-			pesquisar os preços de sua lista de compras sem precisar sair do seu
-			conforto. Nossa aplicação informa o lugar mais próximo e também o
-			mais barato.</p>
+	</nav>
 
 
-		<p id="redirect">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+			<li data-target="#myCarousel" data-slide-to="5"></li>
+		</ol>
 
-			Saiba mais <a href="#pular"> <span
-				class="glyphicon glyphicon-share"></span>
-			</a>
-		</p>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="img/slider/slider1.jpg" alt="slider1" />
+			</div>
 
+			<div class="item">
+				<img src="img/slider/slider2.jpg" alt="slider2" />
+			</div>
 
+			<div class="item">
+				<img src="img/slider/slider3.jpg" alt="slider3" />
+			</div>
+
+			<div class="item">
+				<img src="img/slider/slider4.jpg" alt="slider4" />
+			</div>
+
+			<div class="item">
+				<img src="img/slider/slider5.jpg" alt="slider5" />
+			</div>
+
+			<div class="item">
+				<img src="img/slider/slider6.jpg" alt="slider6" />
+			</div>
+
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button"
+			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
+			aria-hidden="true"></span> <span class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#myCarousel" role="button"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
 	</div>
 
-
-	<!--  -->
-	<!-- Modal Logar -->
-
-
-	<!-- Trigger the modal with a button -->
-
-
 	<!-- Modal -->
-	<div class="modal" style="margin-top: 50px;" id="logar" role="dialog">
+	<div class="modal" id="logar" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -135,8 +129,7 @@
 
 
 	<!-- Modal -->
-	<div class="modal" style="margin-top: 50px;" id="cadastro"
-		role="dialog">
+	<div class="modal" id="cadastro" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -145,164 +138,142 @@
 				</div>
 
 				<div class="modal-body">
-					<form class="form-horizontal" action="/addusuario" method="POST">
+					<form class="form-horizontal">
 						<div class="form-group">
-							<label for="inputNome" class="col-lg-2 control-label">Nome</label>
-							<div class="col-lg-10">
+							<div class="col-sm-6">
 								<input type="text" class="form-control" id="inputNome"
-									name="nome" placeholder="Digite seu Nome" />
+									placeholder="Nome" />
 							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputSobrenome" class="col-lg-2 control-label">Sobrenome</label>
-							<div class="col-lg-10">
+							<div class="col-sm-6">
 								<input type="text" class="form-control" id="inputSobrenome"
-									name="sobrenome" placeholder="Digite seu Sobrenome" />
+									placeholder="Sobrenome" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputEnd" class="col-lg-2 control-label">Endereço</label>
-							<div class="col-lg-10">
+							<div class="col-sm-12">
 								<input type="text" class="form-control" id="inputEnd"
-									name="endereco" placeholder="Digite seu Endereço" />
+									placeholder="Digite seu Endereço" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputTel" class="col-lg-2 control-label">Telefone</label>
-							<div class="col-lg-10">
+							<div class="col-sm-6">
 								<input type="tel" class="form-control" id="inputTel"
-									name="telefone" placeholder="Digite seu Telefone" />
+									placeholder="Telefone" />
 							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputNasc" class="col-lg-2 control-label">Nascimento</label>
-							<div class="col-lg-10">
+							<div class="col-sm-6">
 								<input type="date" class="form-control" id="inputNasc"
-									name="dataNasc" placeholder="Digite sua Data de nascimento" />
+									placeholder="Nascimento" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputEmail" class="col-lg-2 control-label">Email</label>
-							<div class="col-lg-10">
+							<div class="col-sm-12">
 								<input type="email" class="form-control" id="inputEmail"
-									name="email" placeholder="Digite seu Email" />
+									placeholder="Email" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputPassword" class="col-lg-2 control-label">Senha</label>
-							<div class="col-lg-10">
+							<div class="col-sm-12">
 								<input type="password" class="form-control" id="inputPassword"
-									name="senha" placeholder="Digite sua Password" />
-
-
+									placeholder="Digite sua Password" />
 							</div>
 						</div>
-
-						<div class="modal-footer">
-							<div class="form-group">
-								<div class="col-lg-10 col-lg-offset-2">
-									<button type="submit" class="btn btn-warning">Logar</button>
-								</div>
-							</div>
-						</div>
-
 					</form>
 				</div>
-
-
-
+				<div class="modal-footer">
+					<div class="form-group">
+						<div class="col-sm-10 col-lg-offset-2">
+							<button type="submit" class="btn btn-warning">Cadastrar</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Fim logar -->
 
-
-
-	<div class="section_srv">
-
-		<div class="container-fluid text-center servicos">
+	<div class="container">
+		<div class="banner">
 			<h2>SERVIÇOS</h2>
-			<h4>Integração de serviçso inteligente e tecnologia de ponta</h4>
+			<img src="img/home/responsivo.png" alt="responsivo" />
+			<h4>Integração de serviços inteligentes e tecnologia de ponta</h4>
 			<br />
+		</div>
 
-			<div class="rows">
-				<div class="col-sm-4" id="tserv">
-					<span class="glyphicon glyphicon-list-alt logo-small"></span>
-					<h4>Favoritos</h4>
-					<p>Utilize nossas listas pré-definidas</p>
-				</div>
-				<div class="col-sm-4">
-					<span class="glyphicon glyphicon-signal logo-small"></span>
-					<h4>Gráficos</h4>
-					<p>Gráficos de acompanhamento de gastos</p>
-				</div>
-				<div class="col-sm-4">
-					<span class="glyphicon glyphicon-map-marker logo-small"></span>
-					<h4>Localize</h4>
-					<p>Encontre a rota para as ofertas escolhidas</p>
-				</div>
+		<div class="row">
+			<div class="col-sm-4 ">
+				<img src="img/home/placa1s.jpg" alt="Placa 1" />
 			</div>
 
-			<div class="rows">
-				<div class="col-sm-4">
-					<span class="glyphicon glyphicon-edit logo-small"></span>
-					<h4>Preferencias</h4>
-					<p>Configure suas listas</p>
-				</div>
-				<div class="col-sm-4">
-					<span class="glyphicon glyphicon-share logo-small"></span>
-					<h4>Compartilhe</h4>
-					<p>Compartilhe suas listas com amigos</p>
-				</div>
-				<div class="col-sm-4">
-					<span class="glyphicon glyphicon-piggy-bank logo-small"></span>
-					<h4>Econonize</h4>
-					<p>Busque as melhores ofertas com menores valores</p>
-				</div>
+			<div class="col-sm-4">
+				<img src="img/home/placa3s.jpg" alt="Placa 3" />
+			</div>
+
+			<div class="col-sm-4">
+				<img src="img/home/placa2s.jpg" alt="Placa 2" />
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-6 ">
+				<img src="img/home/escrevendo.jpg" alt="Listas" />
+			</div>
+
+			<div class="col-sm-6" id="postit">
+				<img src="img/home/postit1.png" alt="postit" />
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-sm-6" id="postit">
+				<img src="img/home/postit2.png" alt="postit" />
+			</div>
+			<div class="col-sm-6">
+				<img src="img/home/cofrinho.jpg" alt="Custos" />
+			</div>
+		</div>
+		<div class="row">
+
+			<div class="col-sm-6">
+				<img src="img/home/mapas.jpg" alt="Pensamento" />
+			</div>
+			<div class="col-sm-6" id="postit">
+				<img src="img/home/postit3.png" alt="postit" />
 			</div>
 		</div>
 	</div>
+	<footer>
+
+		<div class="container-fluid rodape">
 
 
-	<div class="section_sld">
+			<ul>
+				<li><a href="equipe">Equipe</a></li>
+				<li><a href="sobre">Sobre</a></li>
+				<li>Desenvolvido por SmartGroup - Engenharia de Software Senac
+					2016.</li>
+				<li><a href="uso"> Termo de uso</a> e <a>Privacidade</a></li>
 
-		<div class="jumbotron" id="wrapper">
+			</ul>
 
-			<h2>
-				<strong> Listas Práticas, GeoLocalização e Acompanhamento</strong>
-			</h2>
-			<p>
-				Com apenas poucos passos você terá toda lista pronta, podendo ser
-				personalizada ou uma das sugeridas por nossa equipe <br />
-			</p>
-			<p>Utilize nosso localizador e chegue de forma mais rápida ao
-				local que possui a lista de acordo com suas preferências.</p>
-
-			<p>Verifique seus gastos através de gráficos de forma forma
-				simples e fácil.</p>
-
-			<div class="posicao_sld">
-				<ul class="rslides" id="slider1">
-					<li><img src="img/graficos.jpg" alt="Graficos" /></li>
-					<li><img src="img/carrinho.jpg" alt="Carrinho" /></li>
-					<li><img src="img/mapa.jpg" alt="Mapa" /></li>
-				</ul>
-				<br />
+			<div class="redes-sociais">
+				<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+				<a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a> 
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 			</div>
 
-			<p id="botao">
-				<a class="btn btn-primary ">Saiba Mais</a>
-			</p>
-
 		</div>
-
-	</div>
-
-
-	<div th:include="rodape :: rodape"></div>
-
-
+	</footer>
 </body>
+
+<link rel="stylesheet" href="css/stylehome.css" />
+<link rel="stylesheet" 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima" 	rel="stylesheet" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 </html>

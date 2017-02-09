@@ -2,13 +2,16 @@ package br.org.smartcompras.models;
 
 import java.util.ArrayList;
 
+import org.springframework.data.annotation.Id;
+
 public class Produto {
 
+	@Id
 	private String id;
 	private String produto;
 	private String imgProduto;
 	private String tipoProduto;
-	private ArrayList<String> marca;
+	private String marca;
 	
 	
 	public String getId() {
@@ -35,10 +38,10 @@ public class Produto {
 	public void setTipoProduto(String tipoProduto) {
 		this.tipoProduto = tipoProduto;
 	}
-	public ArrayList<String> getMarca() {
+	public String getMarca() {
 		return marca;
 	}
-	public void setMarca(ArrayList<String> marca) {
+	public void setMarca(String marca) {
 		this.marca = marca;
 	}
 	

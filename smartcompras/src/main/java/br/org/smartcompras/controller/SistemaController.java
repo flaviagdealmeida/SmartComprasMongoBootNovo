@@ -37,14 +37,15 @@ public class SistemaController {
 		return "sistema";
 	}
 	
-	@RequestMapping("listadecompras")
-	public String listadecompras() {
-		return "listadecompras";
-	}	
+	@RequestMapping("maiorgasto")
+	public String maiorgasto() {
+		return "maiorgasto";
+	}
 	
 	@RequestMapping("carrinho")
 	public String carrinho() {
 		return "carrinho";
-	}	
+	}
+	
 	
 }

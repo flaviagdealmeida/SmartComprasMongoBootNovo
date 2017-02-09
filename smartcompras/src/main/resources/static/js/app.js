@@ -1,4 +1,4 @@
-$(function() {
+/*$(function() {
   $("#catalog").accordion();
 });
 var App = angular.module('drag-and-drop', ['ngDragDrop']);
@@ -13,4 +13,4 @@ App.controller('oneCtrl', function($scope, $timeout) {
   $scope.hideMe = function() {
     return $scope.list4.length > 0;
   }
-});
+});*/

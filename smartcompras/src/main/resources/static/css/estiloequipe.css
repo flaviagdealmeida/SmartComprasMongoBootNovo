@@ -1,0 +1,68 @@
+ /* ------------------------------------- Equipe -------------------------------------- */
+
+.row{
+	float:left;
+	padding-left:-0.1em;
+	margin-left: -0.2em;
+}
+.col-sm-2{
+	
+	margin-left: 1.3em;
+	width:16em;
+	height: 40em;
+
+}
+
+.col-sm-2 img{
+	width: 11em;
+	height:9em;
+	margin-left: 1%;
+	padding: 2%;
+}
+
+.panel-warning{
+	border:none;
+	margin-left: 5%;
+	height: 25em;
+	
+}
+
+.panel-body{
+	color:black;
+	heidth: 40em;
+	
+}
+
+.panel-heading{
+	background-image: url("../img/topo2.jpg");
+}
+
+
+.col-sm-4{
+	
+	display:block;
+	float:left;
+	
+}
+
+.tam{
+	width: 250px;
+}
+
+
+.equipe h4, h2{
+	color: white;
+	}
+
+
+.l2{
+	
+	margin-left:18%;
+	margin-top: 400px;	
+	width: 280px;
+	
+}
+#home{
+	margin-top:2%;
+	float:right;
+}

@@ -20,6 +20,7 @@ public class ProdutoController {
 	@Autowired
 	ProdutoMongoRepository produtoRepository;
 	MarcaMongoRepository marcaRepository;
+	//TipoProdutoMongoRepository tipoRepository;
 	
 	 
 	
@@ -51,5 +52,11 @@ public class ProdutoController {
 
 		return "redirect:produto";
 	}
+	
+	/*@RequestMapping(value = "/tipoproduto", params = { "tipo" }, method = RequestMethod.POST)
+	public String listarTipo(Model model, final HttpServletRequest req){
+		model.addAttribute("listarTipo", tipoRepository.findTipoProduto(req.getParameter("tipo")));
+		return "redirect:produto";
+	}*/
 
 }

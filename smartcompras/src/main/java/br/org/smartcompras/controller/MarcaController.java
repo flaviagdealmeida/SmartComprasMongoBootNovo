@@ -36,6 +36,12 @@ public class MarcaController {
 		model.addAttribute("marcaList", marcaRepository.findAll());
 		return "marca";
 	}
+	
+	@RequestMapping("/listamarca")
+	public String marcaLisat(Model model) {
+		model.addAttribute("marcaLista", marcaRepository.findAll());
+		return "listamarca";
+	}
 
 	@RequestMapping(value = "/delmarca", params = { "removerMarca" }, method = RequestMethod.POST)
 

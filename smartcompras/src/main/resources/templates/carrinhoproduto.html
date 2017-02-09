@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="imagens">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width-device-width" />
+<title>SmartCompras</title>
+</head>
+<body ng-controller="ProdutosController" class="ng-scope">
+
+	<div th:include="menu :: menu"></div>
+	
+	<div class="fotoProduto">
+		<img class="img-responsive" alt="{{titulofoto}}" src="{{url}}" />
+	</div>
+	
+	<div th:include="rodape :: rodape"></div>
+</body>
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/estiloprodutos.css" />
+<!-- CSS -->
+
+<!-- Fontes -->
+<link href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/css/font-awesome.min.css" />
+<!-- Fontes -->
+
+<!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/controllers/fotos-controller.js"></script>
+<!-- Angular -->
+
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/ui/1.12.0/jqueryui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+</html>
