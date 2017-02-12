@@ -1,58 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>SmartCompras</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" />
-	
-	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
-	<link rel="stylesheet" href="css/estilo.css" />
-	<link rel="stylesheet" href="css/demo.css" />
-	<link href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima" rel="stylesheet" />
-	
-	<script src="https://code.jquery.com/ui/1.12.0/jqueryui.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-
-
+<title>SmartCompras</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
 
 
-	
+
 	<!-- Menu -->
 
-	<nav class="navbar navbar-default navbar-fixed-top">
-
-	<div class="container-fluid">
-
-
-		<ul class="nav navbar-nav navbar-right">
-
-			<a href="home" id="home" class="btn btn-primary"> Home</a>
-		</ul>
-
-
-	</div>
-	</nav>
-
-	
-	
-	
-	<p>
-	<br />
-	<br />
-	<br />
-	</p>
 
 
 
-	<div class="container-fluid">
+
+	<div class="container">
+
+		<div class="container-fluid topo">
+			<a href="home" id="home" class="btn btn-primary">Home</a>
+			<h2>O SmartCompras</h2>
+		</div>
 
 
-
-	
 		<h2>
 			<b>O SmartCompras</b>
 		</h2>
@@ -94,30 +64,22 @@
 	</div>
 
 
-	<footer>	
 
-	<div class="well" id="rodape">
-		<div class="container-fluid">
-		
-		<ul>		
-			
-				<li><a href="equipe">Equipe</a></li>
-				<li><a href="sobre">Sobre</a></li>
-				<li>Desenvolvido por SmartGroup - Engenharia de Software Senac 2016.<a href="uso"> Termo de uso</a> e <a>Privacidade</a> </li>
-					
-			</ul>
-			
-			
-			<div class="redes-sociais">
-				<a href="#"><img alt="face" src="img/face.png" /></a>
-				<a href="#"><img alt="twt" src="img/twiter.png" /></a>
-				<a href="#"><img alt="g+" src="img/google.png"/></a>
-				<a href="#"><img alt="pinterest" src="img/pint.png"/></a>
-			</div>
-		</div>
-	</div>
-
-</footer>
+	<div th:include="rodape :: rodape"></div>
 
 </body>
+<link rel="stylesheet" href="css/stylehome.css" />
+<link rel="stylesheet" href="css/estiloequipe.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link
+	href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima"
+	rel="stylesheet" />
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </html>

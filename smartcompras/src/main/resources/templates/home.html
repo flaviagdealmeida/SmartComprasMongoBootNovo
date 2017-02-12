@@ -85,23 +85,21 @@
 				<div class="modal-body">
 					<form class="form-horizontal">
 						<div class="form-group">
-							<label for="inputEmail" class="col-lg-2 control-label">Email</label>
-							<div class="col-lg-10">
+							<div class="col-sm-6">
 								<input type="text" class="form-control" id="inputEmail"
 									placeholder="Digite seu Email" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputPassword" class="col-lg-2 control-label">Senha</label>
-							<div class="col-lg-10">
+							<div class="col-sm-6">
 								<input type="password" class="form-control" id="inputPassword"
 									placeholder="Digite sua Password" />
-
-								<div class="esqueceu">
-									<label> <a href="#">Esqueceu a senha? </a>
-									</label>
-								</div>
 							</div>
+						</div>
+						<div class="form-group">	
+							<div class="col-sm-6">
+									<label> <a href="#">Esqueceu a senha? </a> 	</label>
+							</div>							
 						</div>
 					</form>
 				</div>
@@ -114,9 +112,6 @@
 						</div>
 					</div>
 				</div>
-
-
-
 			</div>
 		</div>
 	</div>
@@ -130,6 +125,7 @@
 
 	<!-- Modal -->
 	<div class="modal" id="cadastro" role="dialog">
+	<div id="mask"></div>
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -139,40 +135,45 @@
 
 				<div class="modal-body">
 					<form class="form-horizontal">
-						<div class="form-group">
+						<div class="row">
 							<div class="col-sm-6">
 								<input type="text" class="form-control" id="inputNome"
 									placeholder="Nome" />
 							</div>
+						</div>
+						<div class="row">
 							<div class="col-sm-6">
 								<input type="text" class="form-control" id="inputSobrenome"
 									placeholder="Sobrenome" />
 							</div>
 						</div>
-						<div class="form-group">
-							<div class="col-sm-12">
+						
+						<div class="row">
+							<div class="col-sm-6">
 								<input type="text" class="form-control" id="inputEnd"
 									placeholder="Digite seu Endereço" />
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="row">
 							<div class="col-sm-6">
 								<input type="tel" class="form-control" id="inputTel"
 									placeholder="Telefone" />
 							</div>
+						</div>
+						<div class="row">	
 							<div class="col-sm-6">
 								<input type="date" class="form-control" id="inputNasc"
 									placeholder="Nascimento" />
 							</div>
 						</div>
-						<div class="form-group">
-							<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6">
 								<input type="email" class="form-control" id="inputEmail"
 									placeholder="Email" />
 							</div>
 						</div>
-						<div class="form-group">
-							<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6">
 								<input type="password" class="form-control" id="inputPassword"
 									placeholder="Digite sua Password" />
 							</div>
@@ -181,21 +182,22 @@
 				</div>
 				<div class="modal-footer">
 					<div class="form-group">
-						<div class="col-sm-10 col-lg-offset-2">
+						<div class="col-sm-12 col-lg-offset-2">
 							<button type="submit" class="btn btn-warning">Cadastrar</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	
+
 
 	<!-- Fim logar -->
 
 	<div class="container">
 		<div class="banner">
 			<h2>SERVIÇOS</h2>
-			<img src="img/home/responsivo.png" alt="responsivo" />
+			<img src="img/home/responsivo.png" alt="responsivo"/>
 			<h4>Integração de serviços inteligentes e tecnologia de ponta</h4>
 			<br />
 		</div>
