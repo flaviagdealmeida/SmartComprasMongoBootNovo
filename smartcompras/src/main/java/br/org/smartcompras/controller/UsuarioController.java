@@ -21,9 +21,6 @@ public class UsuarioController {
 	@Autowired
 	UsuarioMongoRepository usuarioRepository;
 	
-	
-	 
-	
 	@RequestMapping(value = "/addusuario", method = RequestMethod.POST)
 	public String addMarcas(@ModelAttribute Usuario usuario) {
 		usuarioRepository.save(usuario);

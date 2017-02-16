@@ -1,7 +1,5 @@
 package br.org.smartcompras.models;
 
-import java.util.ArrayList;
-
 import org.springframework.data.annotation.Id;
 
 public class Produto {

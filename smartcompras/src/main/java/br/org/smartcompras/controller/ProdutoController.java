@@ -1,5 +1,7 @@
 package br.org.smartcompras.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import br.org.smartcompras.models.Produto;
 import br.org.smartcompras.repository.MarcaMongoRepository;
 import br.org.smartcompras.repository.ProdutoMongoRepository;
+
 
 @Controller
 public class ProdutoController {
@@ -53,7 +56,17 @@ public class ProdutoController {
 		return "redirect:produto";
 	}
 	
-	/*@RequestMapping(value = "/tipoproduto", params = { "tipo" }, method = RequestMethod.POST)
+	@RequestMapping(value = "/delprodutoslista", params = { "removerProdutos" }, method = RequestMethod.POST)
+
+	public String delProdutos(@ModelAttribute Produto produto, final HttpServletRequest req) {
+		String produtoId = String.valueOf((req.getParameter("removerProdutos")));
+
+		produtoRepository.delete(produtoId);
+
+		return "redirect:listaproduto";
+	}
+	
+/*	@RequestMapping(value = "/tipoproduto", params = { "tipo" }, method = RequestMethod.POST)
 	public String listarTipo(Model model, final HttpServletRequest req){
 		model.addAttribute("listarTipo", tipoRepository.findTipoProduto(req.getParameter("tipo")));
 		return "redirect:produto";

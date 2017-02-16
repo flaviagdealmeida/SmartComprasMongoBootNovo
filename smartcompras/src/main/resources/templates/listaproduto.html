@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" ng-app="imagens">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width-device-width" />
-<title>SmartCompras</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width-device-width" />
+	<title>SmartCompras</title>
 </head>
 <body ng-controller="FotosController" class="ng-scope">
 
-	<nav class="navbar navbar-inverse">
-
+	<nav class="navbar navbar-inverse" id="menu">
+	
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">SmartCompras</a>
 			</div>
 
-			<div class="collapse navbar-collapse"
-				id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="home">Home</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -24,7 +23,8 @@
 						<ul class="dropdown-menu">
 							<li><a href="listadecompras">Lista de Compras</a></li>
 							<li><a href="listapre">Lista de Predefinida</a></li>
-						</ul></li>
+						</ul>
+						</li>
 
 					<li><a href="#">Localização</a></li>
 					<li class="dropdown"><a href="localizacao" class="dropdown-toggle"
@@ -65,68 +65,72 @@
 				</ul>
 
 			</div>
-
+			
 		</div>
+		
 	</nav>
-	<div class="container">
-		<div class="container-fluid" id="form-listagem">
 
-			<form class="form-horizontal" action="/delprodutolista" method="POST">
-				<fieldset>
-					<legend>Listagem de Produtos</legend>
-					<table class="table table-striped table-hover ">
-						<thead>
-							<tr>
-								<th>Produto</th>
-								<th>Tipo de Produto</th>
-								<th>Marca</th>
-								<th>Url Produto</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr th:each="produto : ${produtoList}">
-								<td th:text="${produto.produto}"></td>
-								<td th:text="${produto.tipoProduto}"></td>
-								<td th:text="${produto.marca}"></td>
-								<td th:text="${produto.imgProduto}"></td>
-								<td class="coluna"><button class="btn btn-danger btn-sm"
-										type="submit" th:value="*{produto.id}"
-										name="removerprodutolista">Excluir</button></td>
-							</tr>
-						</tbody>
-					</table>
-				</fieldset>
-			</form>
-		</div>
+
+	<div class="container">
+
+	<div class="container-fluid">
+	
+			<form action="/delprodutoslista" method="POST">
+			<table class="table table-striped table-hover " id="titulos">
+				<thead>
+					<tr>
+						<th width="200px">Imagem Produto</th>
+						<th class="tit">Produto</th>
+						<th class="tit">Imagem do Produto</th>
+						<th class="tit">Tipo de Produto</th>
+						<th class="tit">Marca</th>
+						<th class="tit">Ação</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr  id="dados" th:each="produto : ${produtoList}">
+						<td><img class="imgtable" th:src="${produto.imgProduto}" alt="${produto.produto}"/></td>
+						<td class="tit" th:text="${produto.produto}"></td>
+						<td class="tit" th:text="${produto.imgProduto}"></td>
+						<td class="tit" th:text="${produto.tipoProduto}"></td>
+						<td class="tit" th:text="${produto.marca}"></td>
+						<td class="coluna tit"><button class="btn btn-danger btn-sm"
+								type="submit" th:value="*{produto.id}" name="removerProdutos">
+								Excluir</button></td>
+
+
+
+					</tr>
+				</tbody>
+			</table>
+
+		</form>
+
 	</div>
+
+</div>
 	<div th:include="rodape :: rodape"></div>
+	
 </body>
 <!-- CSS -->
 <link rel="stylesheet" href="css/estiloprodutos.css" />
 <link rel="stylesheet" href="css/stylehome.css" />
 <!-- CSS -->
 
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link
-	href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima"
-	rel="stylesheet" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima" 	rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- Angular -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/controllers/fotos-controller.js"></script>
 <!-- Angular -->
+
 
 </html>

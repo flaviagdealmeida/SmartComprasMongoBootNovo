@@ -9,13 +9,18 @@
 	.error(function(erro){
 		console.log(error);
 	})
-}); */
+});
 
+app.controller('ProdutosController', function($scope, $http) {
+   $http.get("listaimgproduto.html")
+   .then(function (response) {
+	   $scope.produtos = response.data.records;});
+}); 
 
 angular.module('produtos').factory('ProdutosController', function($http) {
     return {
         getProduct: function(id) {
-            return $http.get('/listaimgproduto').then(function(response) {
+            return $http.get('listaimgproduto.html').then(function(response) {
                 return response.data;
             });
         }

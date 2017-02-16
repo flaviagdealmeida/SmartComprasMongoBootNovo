@@ -50,7 +50,7 @@ public class MarcaController {
 
 		marcaRepository.delete(marcaId);
 
-		return "redirect:marca";
+		return "redirect:listamarca";
 	}
 	
 		

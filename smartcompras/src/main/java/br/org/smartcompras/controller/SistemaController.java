@@ -47,15 +47,24 @@ public class SistemaController {
 		return "gasto";
 	}
 	
+	
+	@RequestMapping("teste")
+	public String teste() {
+		return "teste";
+	}
+	
 	@RequestMapping("localizacao")
 	public String localizacao() {
 		return "localizacao";
 	}
 	
-	@RequestMapping("carrinho")
+	@RequestMapping("carrinhoproduto")
 	public String carrinho() {
-		return "carrinho";
+		return "carrinhoproduto";
 	}
 	
-	
+	@RequestMapping("cadastro")
+	public String cadastro() {
+		return "cadastro";
+	}
 }

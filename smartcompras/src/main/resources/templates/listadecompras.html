@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" ng-app="produtos">
+<html xmlns:th="http://www.thymeleaf.org" >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width-device-width" />
@@ -7,16 +7,17 @@
 
 
 </head>
-<body ng-controller="ProdutosController" class="ng-scope">
+<body ng-app="produtos" ng-controller="ProdutosController">
 
-	<nav class="navbar navbar-inverse" th:fragment="menu">
-	
+	<nav class="navbar navbar-inverse" id="menu">
+
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">SmartCompras</a>
 			</div>
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="home">Home</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -25,13 +26,12 @@
 						<ul class="dropdown-menu">
 							<li><a href="listadecompras">Lista de Compras</a></li>
 							<li><a href="listapre">Lista de Predefinida</a></li>
-						</ul>
-						</li>
+						</ul></li>
 
 					<li><a href="#">Localização</a></li>
-					<li class="dropdown"><a href="localizacao" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-expanded="false">Gráficos
-							<span class="caret"></span>
+					<li class="dropdown"><a href="localizacao"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false">Gráficos <span class="caret"></span>
 					</a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="gastos">Acumulado do Ano</a></li>
@@ -67,26 +67,117 @@
 				</ul>
 
 			</div>
-			
-		</div>
-		
-	</nav>
 
+		</div>
+
+	</nav>
+	
+<div class="container">
+	
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+			<li data-target="#myCarousel" data-slide-to="5"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="img/alimentos/01.jpg" alt="alimento1	" />
+			</div>
+
+			<div class="item">
+				<img src="img/alimentos/02.jpg" alt="alimento2" />
+			</div>
+
+			<div class="item">
+				<img src="img/alimentos/03.jpg" alt="alimento3" />
+			</div>
+
+			<div class="item">
+				<img src="img/alimentos/04.jpg" alt="alimento4" />
+			</div>
+
+			<div class="item">
+				<img src="img/alimentos/05.jpg" alt="alimento5" />
+			</div>
+
+			<div class="item">
+				<img src="img/alimentos/06.jpg" alt="alimento6" />
+			</div>
+			
+			<div class="item">
+				<img src="img/alimentos/07.jpg" alt="alimento7" />
+			</div>
+			
+			<div class="item">
+				<img src="img/alimentos/08.jpg" alt="alimento8" />
+			</div>
+			
+			<div class="item">
+				<img src="img/alimentos/09.jpg" alt="alimento9" />
+			</div>
+			
+			<div class="item">
+				<img src="img/alimentos/10.jpg" alt="alimento10" />
+			</div>
+
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button"
+			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
+			aria-hidden="true"></span> <span class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#myCarousel" role="button"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	
+</div>	
 	<div class="container">
-		<div class="jumbotron">
-			<h2 class="text-center">Produtos</h2>
+	
+	<div class="container-fluid topo">
+			<h2>Lista de Compras</h2>
 		</div>
 		
-		<div ng-repeat="img in imgs" class="panel panel-default">
+		
+		<tr  id="dados" th:each="produto : ${produtoList}">
+						<td><img class="imgtable" th:src="${produto.imgProduto}" alt="${produto.produto}"/></td>
+						<td class="tit" th:text="${produto.produto}"></td>
+						<td class="tit" th:text="${produto.imgProduto}"></td>
+						<td class="tit" th:text="${produto.tipoProduto}"></td>
+						<td class="tit" th:text="${produto.marca}"></td>
+						<td class="coluna tit"><button class="btn btn-danger btn-sm"
+								type="submit" th:value="*{produto.id}" name="removerProdutos">
+								Excluir</button></td>
+
+
+
+					</tr>
+		
+		<div class="panel panel-default" th:each="produto : ${produtoList}">
 			<div class="panel panel-heading">
-				<h3  class="panel-title">{{img.produto}}</h3>
+				<h3  class="panel-title"  th:text="${produto.produto}"></h3>
 			</div>
 			
 			<div class="panel-body">
-				<img src="{{img.imgProduto}}" alt="{{img.produto}}"/>
+				<form>
+					<img class="imgtable" th:src="${produto.imgProduto}" alt="${produto.produto}"/>
+				
+				
+					<button class="btn btn-danger btn-sm" type="submit" th:value="*{produto.id}" name="removerProdutos">
+								Excluir</button>
+				</form>
 			</div>
 		</div>
-	</div>
+</div>
 	
 	<div th:include="rodape :: rodape"></div>
 </body>

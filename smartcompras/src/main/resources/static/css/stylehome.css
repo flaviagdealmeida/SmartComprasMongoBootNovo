@@ -22,52 +22,36 @@ body{
 	margin-right: 1em;
 }
 
+.graf{
+	
+	padding: 0.5%;
+}
+
+#btnsistema{
+	float: right;
+	
+}
+
 .carousel{ 
       width: 100%;
 	  margin-top:-2%;
 	  height: 100%;
   }
-.menu{
+#menu{
 	  margin: 0;
+	  border-bottom: 4px solid orange;
  }
  
+ .cadastro {
  
- .modal{
-	max-width: 320px;
-	margin-left: 30%; 
-	margin-top: 1%;
-	overflow-x: hidden;
-	position:static;
-	
-}
+ 	max-width: 45%;
+ 	margin-top: 3%;
+ 	margin-left: 25%;
+ 	margin-bottom: 3%;
+ }
 
- .modal-body{
-	
-	margin-left: 2%;
-
-}
-
-.modal-dialog{
-	margin-top: 50px;
-	width: 70%;
-	
-}
-  
-.modal-header{
-	background-color:#1C1C1C;
-	max-width: 320px;
-	color:white;
-	font-family: 'Imprima', sans-serif;
-}
-
-.modal-footer button{
-	float: left;
-	margin-left: 	%;
-}
- 
-.row{
-	margin-top:5%;
-
+#cad{
+	margin-left: 10%;
 }
 
 .col-sm-4 img{ 
@@ -75,6 +59,12 @@ body{
 	max-width: 95%;
 	margin-left: 1.7%;
 
+}
+
+.topo{
+	margin-top: 2%;
+	background-color: #1C1C1C;
+	color: white;
 }
 
 .banner img{
@@ -141,4 +131,17 @@ body{
 .redes-sociais{
 	margin-right:1em;
 	
+}
+
+#navhome{
+	margin-right:5%;
+	width: 700px;
+}
+.login{
+	font-size: 8px;	
+	h
+}
+
+.navbar-right li{
+	margin-right:1%;
 }

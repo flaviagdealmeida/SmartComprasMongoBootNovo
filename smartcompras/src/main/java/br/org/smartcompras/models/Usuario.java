@@ -1,5 +1,4 @@
 package br.org.smartcompras.models;
-import java.util.Date;
 
 public class Usuario {
 	
@@ -7,7 +6,7 @@ public class Usuario {
 	private String nome;
 	private String sobrenome;
 	private String email;
-	private String endereco;
+	private String cep;
 	private String dataNasc;
 	private String telefone;
 	private String senha;
@@ -38,12 +37,7 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getEndereco() {
-		return endereco;
-	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
+	
 	public String getDataNasc() {
 		return dataNasc;
 	}
@@ -61,6 +55,12 @@ public class Usuario {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
 	}
 	
 
