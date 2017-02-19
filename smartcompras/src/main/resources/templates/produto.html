@@ -99,17 +99,17 @@
 
 				</p>
 				<p>
-					<label for="marca" class="control-label">Marca</label> <input
+					<!-- label for="marca" class="control-label">Marca</label> <input
 						class="form-control input-sm" type="text" id="marca" name="marca"
-						size="40" />
+						size="40" /-->
 
-					<!-- select class="form-control" th:field="*{marca}">
-					  <option 	th:each="marca : ${marcaList}"
-					  			th:value="${marca.marca}"
+					<select class="form-control" th:field="*{marca}">
+					  <option 	th:each="marca : ${listarmarca}"
+					  			th:value="${marca}"
 					  			th:text="${marca.marca}">  
 					  </option>
 					  
-					</select -->
+					</select>
 
 
 				</p>
