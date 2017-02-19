@@ -41,13 +41,6 @@ body{
 	  margin: 0;
 	  border-bottom: 4px solid orange;
  }
- .logs input{
- 	font-size: 0.9em;
- }
- 
- .placas{
- 	margin-top: 1%;
- }
  
  .cadastro {
  
@@ -140,27 +133,15 @@ body{
 	
 }
 
+#navhome{
+	margin-right:5%;
+	width: 700px;
+}
 .login{
 	font-size: 8px;	
+	h
 }
 
-
-.row{
-	margin-top:5%;
-
+.navbar-right li{
+	margin-right:1%;
 }
-.texto{
-	margin-left: 15%;
-}
-
-.cadastro legend{
-	
-	font-size: 2em;
-	
-}
-
-.fa{
-	padding-right: 2%;
-}
-
-

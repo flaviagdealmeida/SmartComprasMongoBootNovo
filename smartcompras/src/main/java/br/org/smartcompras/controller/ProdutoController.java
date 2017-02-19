@@ -1,7 +1,6 @@
 package br.org.smartcompras.controller;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import br.org.smartcompras.models.Marca;
 import br.org.smartcompras.models.Produto;
 import br.org.smartcompras.repository.MarcaMongoRepository;
 import br.org.smartcompras.repository.ProdutoMongoRepository;
@@ -67,12 +65,6 @@ public class ProdutoController {
 
 		return "redirect:listaproduto";
 	}
-	@RequestMapping("listarmarca")
-	public List<Iterable<Marca>> marcaLista(){
-		return Arrays.asList(marcaRepository.findAll());
-		
-	}
-
 	
 /*	@RequestMapping(value = "/tipoproduto", params = { "tipo" }, method = RequestMethod.POST)
 	public String listarTipo(Model model, final HttpServletRequest req){
