@@ -67,4 +67,11 @@ public class SistemaController {
 	public String cadastro() {
 		return "cadastro";
 	}
+	
+	@RequestMapping("login")
+	public String login() {
+		return "login";
+	}
+
+
 }

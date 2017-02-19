@@ -139,9 +139,24 @@ body{
 }
 .login{
 	font-size: 8px;	
-	h
 }
 
+.row{
+	margin-top:5%;
+
+}
+.texto{
+	margin-left: 15%;
+}
+
+.cadastro legend{
+	
+	font-size: 2em;
+	
+}
+
+.fa{
+	padding-right: 2%;
 .navbar-right li{
 	margin-right:1%;
 }
