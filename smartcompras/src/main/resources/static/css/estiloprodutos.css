@@ -73,5 +73,16 @@
 
 .imgtable{
 	max-width: 50%;
+	
 	margin-left: 20%;
+}
+
+.imgpnl{
+	max-width: 113px;
+	height: 113px;	
+	margin-left: 25%;
+}
+.car button{
+	margin-top: 27%;
+	
 }

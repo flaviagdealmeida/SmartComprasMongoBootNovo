@@ -85,7 +85,7 @@
 						<th class="tit">Tipo de Produto</th>
 						<th class="tit">Marca</th>
 						<th class="tit">Ação</th>
-
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -97,7 +97,9 @@
 						<td class="tit" th:text="${produto.marca}"></td>
 						<td class="coluna tit"><button class="btn btn-danger btn-sm"
 								type="submit" th:value="*{produto.id}" name="removerProdutos">
-								Excluir</button></td>
+								<i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td>
+							
+						
 
 
 

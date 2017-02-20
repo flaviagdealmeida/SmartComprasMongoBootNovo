@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -43,6 +44,7 @@ public class ProdutoController {
 	}
 
 	@RequestMapping("/produto")
+	
 	public String produtoList(Model model) {
 		model.addAttribute("produtoList", produtoRepository.findAll());
 		return "produto";
@@ -68,7 +70,18 @@ public class ProdutoController {
 		return "redirect:listaproduto";
 	}
 	
-	@RequestMapping("listarmarca")
+	
+	@RequestMapping(value = "/altprodutoslista", params = {"alterarProdutos"}, method = RequestMethod.POST)
+
+	public String altProdutos(@ModelAttribute Produto produto, final HttpServletRequest req) {
+		String produtoId = String.valueOf((req.getParameter("alterarProdutos")));
+
+		produtoRepository.findOne(produtoId);
+
+		return "redirect:produto";
+	}
+	
+	@RequestMapping("/listarmarca")
 	public List<Iterable<Marca>> marcaLista(){
 		return Arrays.asList(marcaRepository.findAll());
 		
