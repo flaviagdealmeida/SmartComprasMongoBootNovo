@@ -1,12 +1,8 @@
 package br.org.smartcompras.controller;
 
-import java.util.Arrays;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import br.org.smartcompras.models.Marca;
 import br.org.smartcompras.models.Produto;
 import br.org.smartcompras.repository.MarcaMongoRepository;
 import br.org.smartcompras.repository.ProdutoMongoRepository;
@@ -25,8 +20,9 @@ public class ProdutoController {
 
 	@Autowired
 	ProdutoMongoRepository produtoRepository;
+	
+	@Autowired
 	MarcaMongoRepository marcaRepository;
-	//TipoProdutoMongoRepository tipoRepository;
 	
 	 
 	
@@ -47,6 +43,7 @@ public class ProdutoController {
 	
 	public String produtoList(Model model) {
 		model.addAttribute("produtoList", produtoRepository.findAll());
+		model.addAttribute("listMarca", marcaRepository.findAll());
 		return "produto";
 	}
 
@@ -81,16 +78,4 @@ public class ProdutoController {
 		return "redirect:produto";
 	}
 	
-	@RequestMapping("/listarmarca")
-	public List<Iterable<Marca>> marcaLista(){
-		return Arrays.asList(marcaRepository.findAll());
-		
-	}
-	
-/*	@RequestMapping(value = "/tipoproduto", params = { "tipo" }, method = RequestMethod.POST)
-	public String listarTipo(Model model, final HttpServletRequest req){
-		model.addAttribute("listarTipo", tipoRepository.findTipoProduto(req.getParameter("tipo")));
-		return "redirect:produto";
-	}*/
-
 }

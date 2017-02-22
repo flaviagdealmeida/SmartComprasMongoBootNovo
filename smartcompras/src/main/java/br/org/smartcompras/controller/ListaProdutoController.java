@@ -36,6 +36,13 @@ public class ListaProdutoController {
 		return "listadecompras";
 	}
 	
+	
+	@RequestMapping("/listapredefinida")
+	public String preList(Model model) {
+		model.addAttribute("preList", produtoRepository.findAll());
+		return "listapredefinida";
+	}
+	
 	@RequestMapping("/listaimgproduto")
 	@ResponseBody
 	public Iterable<Produto> imgsProduto(){

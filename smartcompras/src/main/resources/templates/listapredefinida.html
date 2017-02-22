@@ -8,7 +8,6 @@
 <body ng-controller="FotosController" class="ng-scope">
 
 	<nav class="navbar navbar-inverse" id="menu">
-
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">SmartCompras</a>
@@ -22,8 +21,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Lista <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a tabindex="-1" href="listadecompras">Lista de
-									Compras</a></li>
+							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>
 							<li><a tabindex="-1" href="listadecompras">Minhas Listas</a></li>
 							<li class="dropdown-submenu"><a class="test" tabindex="-1"
 								href="#">Lista Pré-Definidas <span class="caret"></span></a>
@@ -68,49 +66,42 @@
 	</nav>
 
 
-	<div class="container">
+	<div class="container" th:fragment="produto">
 
-		<div class="container-fluid">
+		<form class="form-horizontal form-produtos" action="/addpre"
+			method="POST">
+			<fieldset>
+				<legend>Lista Predefinida</legend>
+				<p>
+					<label class="control-label" for="nomeLista">Nome Lista</label> <input
+						class="form-control" type="text" id="nomeLista"
+						name="nomeLista" size="40" ng-mode="titulofoto" />
+				</p>
 
-			<form action="/delprodutoslista" method="POST">
-				<table class="table table-striped table-hover " id="titulos">
-					<thead>
-						<tr>
-							<th width="200px">Imagem Produto</th>
-							<th class="tit">Produto</th>
-							<th class="tit">Imagem do Produto</th>
-							<th class="tit">Tipo de Produto</th>
-							<th class="tit">Marca</th>
-							<th class="tit">Ação</th>
+				<p>
+					<label for="tipoLista" class="control-label">Tipo de Lista
+					</label> <input class="form-control" type="text" id="tipoLista"
+						name="tipoLista" size="40" value="predefinida" />
+				</p>
 
-						</tr>
-					</thead>
-					<tbody>
-						<tr id="dados" th:each="produto : ${produtoList}">
-							<td><img class="imgtable" th:src="${produto.imgProduto}"
-								alt="${produto.produto}" /></td>
-							<td class="tit" th:text="${produto.produto}"></td>
-							<td class="tit" th:text="${produto.imgProduto}"></td>
-							<td class="tit" th:text="${produto.tipoProduto}"></td>
-							<td class="tit" th:text="${produto.marca}"></td>
-							<td class="coluna tit"><button class="btn btn-danger btn-sm"
-									type="submit" th:value="*{produto.id}" name="removerProdutos">
-									<i class="fa fa-trash fa-lg" aria-hidden="true"></i>
-								</button></td>
+				<div class="checkbox">
+					<ul>
+						<li th:each="produto : ${preList}"><input type="checkbox"
+							th:text="${produto.produto}" /></li>
+					</ul>
 
+				</div>
 
+				<div class="col-lg-10 col-lg-offset-4 botoes">
+					<input type="submit" class="btn btn-primary" value="Cadastrar" />
+					<button type="reset" class="btn btn-warning">Cancelar</button>
+				</div>
+			</fieldset>
+		</form>
 
-
-
-						</tr>
-					</tbody>
-				</table>
-
-			</form>
-
-		</div>
 
 	</div>
+
 	<div th:include="rodape :: rodape"></div>
 
 </body>

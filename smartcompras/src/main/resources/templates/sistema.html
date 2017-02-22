@@ -6,30 +6,33 @@
 
 </head>
 <body>
-
-		<nav class="navbar navbar-inverse" id="menu">
-	
-		<div class="container-fluid">
+<nav class="navbar navbar-inverse" id="menu">
+			<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">SmartCompras</a>
 			</div>
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="home">Home</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Lista <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="listadecompras">Lista de Compras</a></li>
-							<li><a href="listapre">Lista de Predefinida</a></li>
-						</ul>
-						</li>
-
-					<li><a href="#">Localização</a></li>
-					<li class="dropdown"><a href="localizacao" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-expanded="false">Gráficos
-							<span class="caret"></span>
+							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>
+							<li><a tabindex="-1" href="listadecompras">Minhas Listas</a></li>
+							<li class="dropdown-submenu"><a class="test" tabindex="-1"
+								href="#">Lista Pré-Definidas <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="#">Churrasco</a></li>
+									<li><a tabindex="-1" href="#">Mensal</a></li>
+								</ul></li>
+						</ul></li>
+					<li><a href="localizacao">Localização</a></li>
+					<li class="dropdown"><a href="localizacao"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false">Gráficos <span class="caret"></span>
 					</a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="gastos">Acumulado do Ano</a></li>
@@ -46,18 +49,10 @@
 							<li><a href="listaproduto">Lista de Produtos</a></li>
 							<li><a href="marca">Cadastro Marca</a></li>
 							<li><a href="listamarca">Lista de Marca</a></li>
+							<li><a href="listapredefinida">Cadastro Lista Predefinida</a></li>
 
 						</ul></li>
 				</ul>
-				<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Localize" />
-
-						<button id="busca" type="button" class="btn btn-primary">
-							<span class="glyphicon glyphicon-search"></span>
-						</button>
-					</div>
-				</form>
 
 				<ul class="nav navbar-nav navbar-right">
 
@@ -65,26 +60,42 @@
 				</ul>
 
 			</div>
-			
+
 		</div>
-		
+
 	</nav>
 
-		<div class="container">
-		
-		</div>
-	
+	<div class="container"></div>
+
 
 	<div th:include="rodape :: rodape"></div>
 </body>
-	<link rel="stylesheet" href="css/stylehome.css" />
-	<link rel="stylesheet" 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<link rel="stylesheet" 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima" 	rel="stylesheet" />
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="css/estiloprodutos.css" />
+<link rel="stylesheet" href="css/stylehome.css" />
+<!-- CSS -->
 
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link
+	href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima"
+	rel="stylesheet" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<!-- Angular -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/controllers/fotos-controller.js"></script>
+<script src="js/droplist.js"></script>
 
 </html>

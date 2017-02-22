@@ -1,5 +1,7 @@
 package br.org.smartcompras.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,8 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpServletRequest;
 
 import br.org.smartcompras.models.Marca;
 import br.org.smartcompras.repository.MarcaMongoRepository;
@@ -18,6 +18,7 @@ public class MarcaController {
 
 	@Autowired
 	MarcaMongoRepository marcaRepository;
+	
 
 	@RequestMapping(value = "/addmarcas", method = RequestMethod.POST)
 	public String addMarcas(@ModelAttribute Marca marca) {
@@ -31,14 +32,10 @@ public class MarcaController {
 		return "redirect:marca";
 	}
 
-	@RequestMapping("/marca")
-	public String marcaList(Model model) {
-		model.addAttribute("marcaList", marcaRepository.findAll());
-		return "marca";
-	}
+	
 	
 	@RequestMapping("/listamarca")
-	public String marcaLisat(Model model) {
+	public String marcaLista(Model model) {
 		model.addAttribute("marcaLista", marcaRepository.findAll());
 		return "listamarca";
 	}
@@ -53,7 +50,7 @@ public class MarcaController {
 		return "redirect:listamarca";
 	}
 	
-		
+
 	
 
 }

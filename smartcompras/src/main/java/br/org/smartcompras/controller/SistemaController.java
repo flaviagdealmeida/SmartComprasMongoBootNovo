@@ -73,5 +73,10 @@ public class SistemaController {
 		return "login";
 	}
 
+	@RequestMapping("marca")
+	public String marca() {
+		return "marca";
+	}
+
 
 }
